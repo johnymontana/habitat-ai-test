@@ -1,6 +1,6 @@
 # PydanticAI Agent with Habitat AI Memory
 
-A conversational AI agent built with [PydanticAI](https://ai.pydantic.dev/) that uses [Habitat AI](https://habitat.ai/)'s **PSS (Persistent Session Store)** for long-term semantic memory. The agent remembers facts across conversation turns and can recall them when resuming a session — even without LLM message history.
+A conversational AI agent built with [PydanticAI](https://ai.pydantic.dev/) that uses Habitat AI's **PSS (Persistent Session Store)** for long-term semantic memory. The agent remembers facts across conversation turns and can recall them when resuming a session — even without LLM message history.
 
 ## What is Habitat AI?
 
@@ -42,7 +42,7 @@ PSS uses the **inline pattern**: each API call both retrieves relevant context a
 ```
 ┌──────────┐      ┌─────────────┐      ┌──────────┐
 │   User   │─────▶│  Habitat AI │─────▶│   LLM    │
-│  message  │      │  PSS /run   │      │ (OpenAI) │
+│  message │      │  PSS /run   │      │ (OpenAI) │
 └──────────┘      └──────┬──────┘      └────┬─────┘
                          │                   │
                     compressed          LLM response
@@ -605,9 +605,3 @@ Returns:
   "session_id": "uuid"
 }
 ```
-
-## Links
-
-- **Habitat AI PSS API**: `https://pss.versino.de/api/v1`
-- **API Documentation**: [Google Docs](https://docs.google.com/document/d/10pK_a5LGWJGvDKx4hzocfXoPQMdYWMmRiaSeFGNGWEc/edit?usp=sharing)
-- **PydanticAI**: [ai.pydantic.dev](https://ai.pydantic.dev/)
