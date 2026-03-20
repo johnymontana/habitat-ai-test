@@ -1,0 +1,13 @@
+[project]
+name = "habitat-ai-test"
+version = "0.1.0"
+description = "PydanticAI agent with Habitat AI PSS memory"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic-ai",
+    "openai",
+    "anthropic",
+    "httpx",
+    "rich",
+    "requests",
+]
